@@ -11,18 +11,19 @@ password = "Ilove<3mymom5."
 to_email = "er1shivam@gmail.com"
 
 
+file_html_ = "template\email_message.html"
+
 class MessageUser():
     user_details = []
     message = []
     base_message = """Hi {name}!
 
-    Thank you for the purchase on {date}.
-    We hope you are excited about using it.
-    Just as a reminder the purchase total was ${total}.
-    Have a great one!
+Thank you for the purchase on {date}.
+We hope you are excited about using it.
+Just as a reminder the purchase total was ${total}.
+Have a great one!
 
-    Team CodeForLife
-    """
+Team CodeForLife"""
     email_message = []
     def add_user(self,name,amount,email=None):
         name = name[0].upper() + name[1:].lower()
@@ -100,5 +101,5 @@ obj = MessageUser()
 obj.add_user("Shivam!",455.5,email='er3shivam@gmail.com')
 obj.add_user("Shivam2",125.34,email='er1shivam@gmail.com')
 
-print(obj.get_details())
-print(obj.send_message())
+# print(obj.get_details())
+# print(obj.send_message())

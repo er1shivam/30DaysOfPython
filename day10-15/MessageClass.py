@@ -3,6 +3,9 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import smtplib
 
+
+# Details to connect to the mail server using smtp
+
 host = "smtp.gmail.com"
 port = 587
 username = "er05shivam@gmail.com"
@@ -10,7 +13,7 @@ from_email = username
 password = "Ilove<3mymom5."
 to_email = "er1shivam@gmail.com"
 
-
+# using custom message predefined in message.html
 file_html_ = "template\email_message.html"
 
 class MessageUser():
@@ -65,7 +68,7 @@ Team CodeForLife"""
                     self.message.append(new_msg)
             return self.message
         return []
-
+#       Method to send message
     def send_message(self):
         self.make_message()
         if len(self.email_message) > 0:
